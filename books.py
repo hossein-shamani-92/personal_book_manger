@@ -1,6 +1,7 @@
-def asking_books():
+import json
+def asking_books(books):
     
-    books = []
+
 
 
     number_of_book = int(input("how many book do you want: "))
@@ -12,3 +13,15 @@ def asking_books():
 
     for i in books:
         print("your books", i)
+
+def save_books_name(books):
+        with open("tasks.json", "w", encoding="utf-8") as file:
+            json.dump(books, file, ensure_ascii=False, indent=2)
+
+def load_books_name():
+    try:
+        with open("tasks.json", "r", encoding="utf-8") as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return []
+    
