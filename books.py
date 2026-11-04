@@ -1,32 +1,32 @@
 import json
-def asking_books(books):
-    
 
+def asking_books(books, name):
 
+    count = int(input("how many books do you want to enter? "))
 
-    number_of_book = int(input("how many book do you want: "))
-
-    for i in range(number_of_book):
-        book_name = input("give a book name: ")
-        print("ok", book_name, "is a great book")
+    for i in range(count):
+        book_name = input("enter a book: ")
+        print(book_name, "is Great!")
         priority = input("enter priority(low/medium/high):").lower()
         book = {
-            "name": book_name,
+            "name": name,
+            "book": book_name,
             "priority": priority
         }
         books.append(book)
 
-        for book in books :
-            print(book["name"], "-  priority: ", book["priority"])
+    print("your books are: ")
 
-def save_books_name(books):
-        with open("books.json", "w", encoding="utf-8") as file:
-            json.dump(books, file, ensure_ascii=False, indent=2)
+    for book in books:
+        print("name:", book["name"],"\n book: ", book["book"], " \n priority: ", book["priority"])
+        print("--------------------")
+def save_books_info(books):
+    with open("books.json", "w", encoding="utf-8") as file:
+        json.dump(books, file, ensure_ascii=False, indent=2)
 
-def load_books_name():
+def load_books_info():
     try:
         with open("books.json", "r", encoding="utf-8") as file:
             return json.load(file)
     except FileNotFoundError:
         return []
-    
