@@ -7,12 +7,17 @@ def asking_books(books):
     number_of_book = int(input("how many book do you want: "))
 
     for i in range(number_of_book):
-        book = input("give a book name: ")
-        print("ok", book, "is a great book")
+        book_name = input("give a book name: ")
+        print("ok", book_name, "is a great book")
+        priority = input("enter priority(low/medium/high):").lower()
+        book = {
+            "name": book_name,
+            "priority": priority
+        }
         books.append(book)
 
-    for i in books:
-        print("your books", i)
+        for book in books :
+            print(book["name"], "-  priority: ", book["priority"])
 
 def save_books_name(books):
         with open("books.json", "w", encoding="utf-8") as file:
