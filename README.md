@@ -38,6 +38,12 @@ A Simple personal book manager built with Python.
   * Keeps private information outside the main Python file
   * Loads the password from `.env` (`ADMIN_ENTRY_PASSWPRD`)
 
+
+* Book Priority
+  * after every book that you pick and say you have to pick a priority beetween this three options:
+  * high
+  * medium
+  * low
 ## Project Structure
 
 Here is an overview of the key files and directories in this repository:
@@ -184,6 +190,7 @@ your books cpp
 * [x] Add admin mode authentication
 * [x] Load and manage book list
 * [x] Save books into JSON file
+* [x] Add priority 
 * [ ] Add search by book title
 * [ ] Add delete book option
 
