@@ -2,12 +2,13 @@ import json
 
 def asking_books(books, name, count_book):
 
-    count = int(input("how many books do you want to enter? "))
+    count = int(input("\n how many books do you want to enter? "))
 
     for i in range(count):
-        book_name = input("enter a book: ")
+        book_name = input("\n enter a book: ")
         print(book_name, "is Great!")
-        priority = input("enter priority(low/medium/high):").lower()
+        priority = input("\n enter priority(low/medium/high):").lower()
+        print("\n")
         book = {
             "name": name,
             "book": book_name,
@@ -15,12 +16,12 @@ def asking_books(books, name, count_book):
         }
         books.append(book)
 
-    print("your books are: ")
+    print("\n your books are: ")
 
     
 
     for book in books:
-        print("name:", book["name"],"\n book: ", book["book"], " \n priority: ", book["priority"])
+        print("\n name:", book["name"],"\n book: ", book["book"], " \n priority: ", book["priority"])
         print("--------------------")
 
     print("\n you had entered", count_book + count ,"books\n")
