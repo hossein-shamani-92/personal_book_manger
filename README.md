@@ -158,7 +158,7 @@ enter your name: hossein
 hi,  hossein
 do you want to enter admin mode? (yes | no): yes
 enter the password: ********
-welcome admin!!
+admin mode activated
 ```
 ### Regular User
 ```text
