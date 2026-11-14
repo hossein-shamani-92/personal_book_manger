@@ -1,4 +1,5 @@
 from books import asking_books, save_books_info, load_books_info
+from book_count import count
 from dotenv import load_dotenv
 import os
 
@@ -17,6 +18,6 @@ if admin_asking == "yes":
 
 books = []
 load_books = load_books_info()
-
-asking_books(load_books, name)
+count_book = count()
+asking_books(load_books, name, count_book)
 save_books_info(load_books)

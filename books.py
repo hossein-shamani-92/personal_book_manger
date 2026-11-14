@@ -1,6 +1,6 @@
 import json
 
-def asking_books(books, name):
+def asking_books(books, name, count_book):
 
     count = int(input("how many books do you want to enter? "))
 
@@ -17,9 +17,13 @@ def asking_books(books, name):
 
     print("your books are: ")
 
+    
+
     for book in books:
         print("name:", book["name"],"\n book: ", book["book"], " \n priority: ", book["priority"])
         print("--------------------")
+
+    print("\n you had entered", count_book + count ,"books\n")
 def save_books_info(books):
     with open("books.json", "w", encoding="utf-8") as file:
         json.dump(books, file, ensure_ascii=False, indent=2)
