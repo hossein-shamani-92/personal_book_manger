@@ -6,7 +6,8 @@ import os
 load_dotenv()
 
 name = input("what is your name? ")
-print("welcome", name)
+
+print("Welcome, ", name, "! We're glad to have you here. Enjoy using our program!")
 
 admin_asking = input("\n do you want to enter admin mode? (yes/no) ")
 if admin_asking == "yes":
